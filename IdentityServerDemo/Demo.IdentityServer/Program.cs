@@ -1,6 +1,12 @@
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddIdentityServer()
+    .AddDeveloperSigningCredential()
+    .AddInMemoryApiScopes(Config.GetApiScopes())
+    .AddInMemoryClients(Config.GetClients());
+
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.UseIdentityServer();
 
 app.Run();
