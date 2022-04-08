@@ -17,7 +17,7 @@ internal class Config
     {
         return new List<ApiResource>()
         {
-            new ApiResource("resourceServerScopes", "Resource Server Backend")
+            new ApiResource("ApiResources", "Resource Server Backend")
             {
                 Scopes = new List<string>{ "resourceServerScopes1" }
             }
