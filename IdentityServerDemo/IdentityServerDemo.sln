@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.ResourceServer", "Demo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.IdentityServer", "Demo.IdentityServer\Demo.IdentityServer.csproj", "{651A991C-0F85-4495-8372-A94CFA517915}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.ConsoleClient", "Demo.ConsoleClient\Demo.ConsoleClient.csproj", "{678F23A2-18A5-42A2-A62E-E9E128BC89DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{651A991C-0F85-4495-8372-A94CFA517915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{651A991C-0F85-4495-8372-A94CFA517915}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{651A991C-0F85-4495-8372-A94CFA517915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{678F23A2-18A5-42A2-A62E-E9E128BC89DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{678F23A2-18A5-42A2-A62E-E9E128BC89DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{678F23A2-18A5-42A2-A62E-E9E128BC89DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{678F23A2-18A5-42A2-A62E-E9E128BC89DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

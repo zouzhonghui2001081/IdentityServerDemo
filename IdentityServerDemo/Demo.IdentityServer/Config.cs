@@ -45,6 +45,23 @@ internal class Config
                 ClientSecrets = { new Secret("secret".Sha256())},
                 AllowedScopes = { "resourceServerScope1", "resourceServerScope2" }
             },
+            // resource owner password grant type client
+            new Client
+            {
+                ClientId = "client.resourceowner",
+                AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                ClientSecrets = { new Secret("secret".Sha256())},
+                AllowedScopes = { "resourceServerScope1", "resourceServerScope2" }
+            },
+        };
+    }
+
+    public static List<TestUser> GetTestUsers()
+    {
+        return new List<TestUser>
+        {
+            new TestUser{ SubjectId = "1", Username="ReourceOwner1", Password="Admin123"},
+            new TestUser{ SubjectId = "2", Username="ReourceOwner2", Password="Admin123"},
         };
     }
 }
