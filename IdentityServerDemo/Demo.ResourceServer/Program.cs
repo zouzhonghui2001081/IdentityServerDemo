@@ -9,7 +9,7 @@ builder.Services.AddAuthentication("Bearer")
     {
         opt.Authority = "http://localhost:5999";
         opt.RequireHttpsMetadata = false;
-        opt.ApiName = "ApiResources";
+        opt.ApiName = "backendApiResource"; // ApiResource Name
     });
 builder.Services.AddDbContext<BankContext>(options => options.UseInMemoryDatabase("BankingDb"));
 builder.Services.AddControllers();

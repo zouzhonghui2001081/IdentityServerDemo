@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.ResourceServer.Controllers
 {
+    // Add this property to secure this API
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]

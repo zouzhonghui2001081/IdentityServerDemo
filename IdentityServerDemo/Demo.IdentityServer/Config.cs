@@ -17,9 +17,9 @@ internal class Config
     {
         return new List<ApiResource>()
         {
-            new ApiResource("ApiResources", "Resource Server Backend")
+            new ApiResource("backendApiResource", "Resource Server Backend")
             {
-                Scopes = new List<string>{ "resourceServerScopes1" }
+                Scopes = new List<string>{ "resourceServerScope1", "resourceServerScope2" }
             }
         };
     }
@@ -28,7 +28,8 @@ internal class Config
     {
         return new[]
         {
-            new ApiScope(name: "resourceServerScopes",   displayName: "Resource Server Backend")
+            new ApiScope(name: "resourceServerScope1",   displayName: "Backend Api Scope1"),
+            new ApiScope(name: "resourceServerScope2",   displayName: "Backend Api Scope2")
         };
     }
 
@@ -42,7 +43,7 @@ internal class Config
                 ClientId = "client.clientcredential",
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = { new Secret("secret".Sha256())},
-                AllowedScopes = { "resourceServerScopes" }
+                AllowedScopes = { "resourceServerScope1", "resourceServerScope2" }
             },
         };
     }
