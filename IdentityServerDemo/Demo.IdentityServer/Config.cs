@@ -53,6 +53,20 @@ internal class Config
                 ClientSecrets = { new Secret("secret".Sha256())},
                 AllowedScopes = { "resourceServerScope1", "resourceServerScope2" }
             },
+            // implicit grant type client
+            new Client
+            {
+                ClientId = "client.implicit",
+                ClientName = "MVC Client",
+                AllowedGrantTypes = GrantTypes.Implicit,
+                RedirectUris = { "http://localhost:5555/signin-oidc" }, // !!!! mvc client uri and port
+                PostLogoutRedirectUris = { "http://localhost:555/signout-callback-oidc" }, // !!!! mvc client uri and port
+                AllowedScopes = new List<string>
+                {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile
+                }
+            },
         };
     }
 

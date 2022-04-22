@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Authentication";
+}
+
+<h1>User is Authenticated!</h1>
+
+<h3>User Claims</h3>
+<dl>
+    @foreach (var claim in User.Claims)
+    {
+        <dt>Issuer: @claim.Issuer</dt>
+        <dt>Issuer: @claim.Type</dt>
+        <dt>Value : @claim.Value</dt>
+        <dt>-----------------------------------</dt>
+    }
+</dl>
